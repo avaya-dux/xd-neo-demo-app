@@ -3,6 +3,9 @@ import {
   Chip,
   Icon,
   Link,
+  Menu,
+  MenuButton,
+  MenuItem,
   Table,
 } from "@avaya/neo-react";
 
@@ -61,7 +64,15 @@ const WorkflowsPage = () => {
         // allowToggleColumnVisibility
         // handleRefresh={() => {
         //   console.log("Handle your refresh logic here");
-				// }}
+        // }}
+        customActionsNode={
+					<section>
+						<Menu menuRootElement={<MenuButton>New</MenuButton>}>
+                <MenuItem>Workflow</MenuItem>
+                <MenuItem>Folder</MenuItem>
+            </Menu>
+					</section>
+				}
       />
     </section>
   );
