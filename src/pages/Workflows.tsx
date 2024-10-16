@@ -39,7 +39,10 @@ const WorkflowsPage = () => {
           { Header: "Created By", accessor: "CreatedBy" },
         ]}
         itemsPerPageOptions={[5, 10, 20]}
-        allowToggleColumnVisibility
+        // allowToggleColumnVisibility
+        // handleRefresh={() => {
+        //   console.log("Handle your refresh logic here");
+				// }}
       />
     </section>
   );
