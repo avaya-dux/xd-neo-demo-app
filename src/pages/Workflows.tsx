@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Column } from "react-table";
 import {
+  Link,
   Table,
 } from "@avaya/neo-react";
 
@@ -33,7 +33,12 @@ const WorkflowsPage = () => {
         data={data}
         columns={[
           { Header: "Type", accessor: "Type" },
-          { Header: "Name", accessor: "Name" },
+          {
+            Header: "Name", accessor: "Name",
+            Cell: ({ value }: { value: string }) => (
+					<Link href="#">{value}</Link>
+				),
+           },
           { Header: "Current Version", accessor: "Version" },
           { Header: "Created At", accessor: "CreationDate" },
           { Header: "Created By", accessor: "CreatedBy" },
