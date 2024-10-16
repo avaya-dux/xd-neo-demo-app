@@ -10,10 +10,11 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  SubMenu,
   TopNav,
   Widget
 } from "@avaya/neo-react";
+
+import WorkflowsPage from './pages/Workflows';
 
 function App() {
   const leftNav: ReactNode = (
@@ -70,7 +71,7 @@ function App() {
       <AppLayout
         header={TopNavBar}
         leftPanel={leftNav}
-        mainContent={emptyWidget}
+        mainContent={<WorkflowsPage />}
       />
     </>
   )
