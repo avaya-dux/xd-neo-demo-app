@@ -62,9 +62,9 @@ const WorkflowsPage = () => {
         ]}
         itemsPerPageOptions={[5, 10, 20]}
         allowToggleColumnVisibility
-        // handleRefresh={() => {
-        //   console.log("Handle your refresh logic here");
-        // }}
+        handleRefresh={() => {
+          console.log("Handle your refresh logic here");
+        }}
         customActionsNode={
 					<section>
 						<Menu menuRootElement={<MenuButton>New</MenuButton>}>
