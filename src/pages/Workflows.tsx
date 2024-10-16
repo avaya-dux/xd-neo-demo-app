@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import {
+  Chip,
+  Icon,
   Link,
   Table,
 } from "@avaya/neo-react";
@@ -32,13 +34,25 @@ const WorkflowsPage = () => {
       <Table
         data={data}
         columns={[
-          { Header: "Type", accessor: "Type" },
+          {
+            Header: "Type", accessor: "Type",
+            Cell: ({ value }: { value: string }) => {
+              if (value === "folder") return (
+                <Icon
+                  aria-label="Folder"
+                  icon="folder"
+                  size="lg"
+                />);
+              return (
+                <Chip>Subroutine</Chip>
+              )
+            }
+           },
           {
             Header: "Name", accessor: "Name",
             Cell: ({ value }: { value: string }) => (
 					<Link href="#">{value}</Link>
-				),
-           },
+				)},
           { Header: "Current Version", accessor: "Version" },
           { Header: "Created At", accessor: "CreationDate" },
           { Header: "Created By", accessor: "CreatedBy" },
