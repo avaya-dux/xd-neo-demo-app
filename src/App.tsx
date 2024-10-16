@@ -10,6 +10,7 @@ import {
   Menu,
   MenuButton,
   MenuItem,
+  NeoThemeProvider,
   TopNav,
   Widget
 } from "@avaya/neo-react";
@@ -68,11 +69,13 @@ function App() {
 
   return (
     <>
-      <AppLayout
-        header={TopNavBar}
-        leftPanel={leftNav}
-        mainContent={<WorkflowsPage />}
-      />
+      <NeoThemeProvider initialMode="dynamic">
+        <AppLayout
+          header={TopNavBar}
+          leftPanel={leftNav}
+          mainContent={<WorkflowsPage />}
+          />
+        </NeoThemeProvider>
     </>
   )
 }
