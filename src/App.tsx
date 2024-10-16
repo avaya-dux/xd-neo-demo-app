@@ -37,7 +37,7 @@ function App() {
       logo={<Image src="/logo.svg" isDecorativeOrBranding />}
     >
       <>
-        <TopNav.IconButton aria-label="information" icon="info" />
+        <TopNav.IconButton aria-label="information" icon="help" />
         <TopNav.IconButton aria-label="notifications" icon="notifications-on" />
         <TopNav.IconButton aria-label="Settings" icon="settings" />
         <TopNav.Avatar
