@@ -14,14 +14,14 @@ function App() {
   const leftNav: ReactNode = (
     <LeftNav
       aria-label="Demo app left nav"
-      currentUrl="http://active.com"
+      currentUrl="/workflows"
     >
       <LeftNav.TopLinkItem
-        icon="interaction-details"
+        icon="workflow"
         label="Workflows"
-        href="/workfloes"
+        href="/workflows"
       />
-      <LeftNav.TopLinkItem icon="user-add" label="Teams" href="/teams" />
+      <LeftNav.TopLinkItem icon="broadcast" label="Manage Audio" href="/audio" />
     </LeftNav>
   );
 
