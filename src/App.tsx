@@ -4,8 +4,13 @@ import './App.css'
 import "@avaya/neo-react/avaya-neo-react.css";
 import {
   AppLayout,
+  Avatar,
   Image,
   LeftNav,
+  Menu,
+  MenuButton,
+  MenuItem,
+  SubMenu,
   TopNav,
   Widget
 } from "@avaya/neo-react";
@@ -34,6 +39,22 @@ function App() {
         <TopNav.IconButton aria-label="information" icon="info" />
         <TopNav.IconButton aria-label="notifications" icon="notifications-on" />
         <TopNav.IconButton aria-label="Settings" icon="settings" />
+        <TopNav.Avatar
+        avatar={<Avatar initials="MD" />}
+        dropdown={
+          <Menu
+            itemAlignment="right"
+            menuRootElement={
+              <MenuButton onClick={() => console.log("Functional Menu opened")}>
+                Functional Menu
+              </MenuButton>
+            }
+          >
+            <MenuItem>Profile</MenuItem>
+            <MenuItem>Settings</MenuItem>
+          </Menu>
+        }
+        />
       </>
     </TopNav>
   );
