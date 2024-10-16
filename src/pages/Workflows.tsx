@@ -36,6 +36,7 @@ const WorkflowsPage = () => {
     <section>
       <Table
         data={data}
+        selectableRows="multiple"
         columns={[
           {
             Header: "Type", accessor: "Type",
@@ -60,7 +61,7 @@ const WorkflowsPage = () => {
           { Header: "Created At", accessor: "CreationDate" },
           { Header: "Created By", accessor: "CreatedBy" },
         ]}
-        itemsPerPageOptions={[5, 10, 20]}
+        itemsPerPageOptions={[5, 10, 20, 1000]}
         allowToggleColumnVisibility
         handleRefresh={() => {
           console.log("Handle your refresh logic here");
